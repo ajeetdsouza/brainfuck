@@ -1,0 +1,57 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 587abf71289c21c897b8fd872d105618e4ee5d5a0c2fd04a83e9bf614fb5909e
+
+name:           brainfuck
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/ajeetdsouza/brainfuck#README.md>
+homepage:       https://github.com/ajeetdsouza/brainfuck#readme
+bug-reports:    https://github.com/ajeetdsouza/brainfuck/issues
+author:         Ajeet D'Souza
+maintainer:     98ajeet@gmail.com
+copyright:      2019 Ajeet D'Souza
+license:        GPLv3
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/ajeetdsouza/brainfuck
+
+library
+  exposed-modules:
+      Ast
+      Evaluator
+      Lexer
+      Memory
+      Optimizer
+      Parser
+      ParserError
+      Pretty
+      Token
+  other-modules:
+      Paths_brainfuck
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , text
+  default-language: Haskell2010
+
+executable brainfuck
+  main-is: Main.hs
+  other-modules:
+      Paths_brainfuck
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , brainfuck
+    , text
+  default-language: Haskell2010

@@ -1,0 +1,30 @@
+name:                brainfuck
+version:             0.1.0.0
+github:              "ajeetdsouza/brainfuck"
+license:             GPLv3
+author:              "Ajeet D'Souza"
+maintainer:          "98ajeet@gmail.com"
+copyright:           "2019 Ajeet D'Souza"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/ajeetdsouza/brainfuck#README.md>
+
+dependencies:
+- base >= 4.7 && < 5
+- text
+
+library:
+  source-dirs: src
+
+executables:
+  brainfuck:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - brainfuck
