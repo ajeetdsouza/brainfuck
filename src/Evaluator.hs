@@ -22,7 +22,7 @@ eval mem @ (Memory.Tape ml mx mr) prg @ (node:nodes) = case Ast.nodeType node of
   Ast.Read      -> do
     mx' <- Char.ord <$> getChar
     eval (Memory.Tape ml mx' mr) nodes
-  Ast.Loop loop -> do
+  Ast.Loop loop ->
     if mx == 0
       then eval mem nodes
       else do

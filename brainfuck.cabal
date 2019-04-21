@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 587abf71289c21c897b8fd872d105618e4ee5d5a0c2fd04a83e9bf614fb5909e
+-- hash: ed40fe87236368364ef4af3d5d0a888607b36f0caf8c575feadf00acfb0d5177
 
 name:           brainfuck
 version:        0.1.0.0
@@ -15,6 +15,7 @@ author:         Ajeet D'Souza
 maintainer:     98ajeet@gmail.com
 copyright:      2019 Ajeet D'Souza
 license:        GPLv3
+license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
